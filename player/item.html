@@ -1,6 +1,18 @@
 <div class="item">
-    <h2>{{title}}</h2>
-    <iframe class="video w100" width="640" height="360" src="//www.youtube.com/embed/{{videoid}}" frameborder="0" allowfullscreen></iframe>
-    <h3>Description:</h3>
-    <p>{{description}}</p>
+  <span class="pull-right">{{publishedAt}}</span><br />
+  <span class="pull-right">
+    <span class="fa fa-user"></span>
+    <a href="https://www.youtube.com/channel/{{channelId}}" target="_blank">{{channelTitle}}</a>
+  </span>
+  <h2>{{title}}</h2>
+  <iframe
+    class="video w100"
+    width="640"
+    height="360"
+    src="//www.youtube.com/embed/{{videoid}}"
+    frameborder="0"
+    allowfullscreen
+  ></iframe>
+  <h3>Description:</h3>
+  <p>{{description}}</p>
 </div>

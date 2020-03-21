@@ -24,12 +24,12 @@ $(function() {
       var results = response.result;
       $("#results").html("");
       $.each(results.items, function(index,item) {
-        console.log(item);
+        console.log(item.snippet);
         
         $.get("player/item.html", function(data) {      
           $("#results").append(
             makeData(data, [
-              { title: item.snippet.title, videoid: item.id.videoId, description:item.snippet.description }
+              { title: item.snippet.title, videoid: item.id.videoId, description:item.snippet.description, publishedAt: item.snippet.publishedAt, channelTitle: item.snippet.channelTitle, channelId: item.snippet.channelId }
             ])
           );
         });
